@@ -15,7 +15,11 @@ module Faker
       #
       # @faker.version 0.9.0
       def name
-        parse('name.name')
+        parse("name.name")
+      end
+
+      def alternative_name(name)
+        parse("name.alternative_names.#{name.downcase}")
       end
 
       ##
